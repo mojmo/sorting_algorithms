@@ -32,5 +32,9 @@ void cocktail_sort_list(listint_t **list);
 void swap_nodes_forward(listint_t **head, listint_t **tail, listint_t **curr);
 void swap_nodes_backward(listint_t **head, listint_t **tail, listint_t **curr);
 void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void perform_merge(int *new_arr, size_t start_i, size_t end_i, int *arr);
+void merge(int *new_arr, size_t start_i, size_t mid_i, size_t end_i, int *arr);
+void copy_array(int *arr, size_t start_i, size_t end_i, int *new_arr);
 
 #endif /* SORT_H */
