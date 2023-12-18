@@ -36,5 +36,8 @@ void merge_sort(int *array, size_t size);
 void perform_merge(int *new_arr, size_t start_i, size_t end_i, int *arr);
 void merge(int *new_arr, size_t start_i, size_t mid_i, size_t end_i, int *arr);
 void copy_array(int *arr, size_t start_i, size_t end_i, int *new_arr);
+void heap_sort(int *array, size_t size);
+void heapify(int *array, size_t size, size_t heap_size, size_t root);
+void swap(int *a, int *b);
 
 #endif /* SORT_H */
