@@ -45,17 +45,10 @@ void radix_sort(int *array, size_t size)
 void counting_sort_LSD(int *array, size_t size, int place)
 {
 	int *count, *output;
-	int max, range;
+	int range;
 	size_t i;
 
-	max = (array[0] / place) % 10;
-	for (i = 1; i < size; i++)
-	{
-		if (((array[i] / place) % 10) > max)
-			max = array[i];
-	}
-
-	range = max + 1;
+	range = 10;
 	output = malloc(size * sizeof(int));
 	if (!output)
 		return;
@@ -66,6 +59,9 @@ void counting_sort_LSD(int *array, size_t size, int place)
 		free(output);
 		return;
 	}
+
+	for (i = 0; i < (size_t)range; i++)
+		count[i] = 0;
 
 	for (i = 0; i < size; i++)
 		count[(array[i] / place) % 10]++;
