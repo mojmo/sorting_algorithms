@@ -39,5 +39,8 @@ void copy_array(int *arr, size_t start_i, size_t end_i, int *new_arr);
 void heap_sort(int *array, size_t size);
 void heapify(int *array, size_t size, size_t heap_size, size_t root);
 void swap(int *a, int *b);
+void radix_sort(int *array, size_t size);
+void counting_sort_LSD(int *array, size_t size, int place);
+int get_max(int *array, size_t n);
 
 #endif /* SORT_H */
